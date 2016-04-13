@@ -1,5 +1,7 @@
 ### Alfred2 workflow 查看每日新番
 
+[下载](https://raw.githubusercontent.com/iamcco/bg.workflow/master/bg.alfredworkflow)
+
 **显示 _周日_ 的番**
 ![one](https://cloud.githubusercontent.com/assets/5492542/14480876/ca41c478-015f-11e6-9820-4d2fd89d31b9.png)
 
