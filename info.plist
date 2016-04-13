@@ -27,7 +27,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>bg</string>
+	<string>追番</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -89,7 +89,9 @@ print workflow.getAnimes(query)</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>提交问题：
+
+https://github.com/iamcco/bg.workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>207EAE3C-2E6F-41CA-9370-1511F66EB89B</key>
