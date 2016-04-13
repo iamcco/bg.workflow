@@ -2,6 +2,10 @@
 
 [下载](https://raw.githubusercontent.com/iamcco/bg.workflow/master/bg.alfredworkflow)
 
+Screenshot
+
+![no parmas](https://cloud.githubusercontent.com/assets/5492542/14499414/c37b7122-01d0-11e6-9d91-09cc1e2c6df3.png)
+
 **显示 _周日_ 的番**
 ![one](https://cloud.githubusercontent.com/assets/5492542/14480876/ca41c478-015f-11e6-9820-4d2fd89d31b9.png)
 
