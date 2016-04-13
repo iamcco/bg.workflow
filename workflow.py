@@ -16,7 +16,7 @@ template = u'''
 '''
 
 item = u'''
-  <item uid="{{name}}" arg="" valid="YES">
+  <item uid="{{name}}" arg="{{name}}" valid="YES">
     <title>{{name}}</title>
     <subtitle>播放时间 {{time}}</subtitle>
     <icon>./src/{{day}}.png</icon>
