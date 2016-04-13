@@ -32,3 +32,5 @@
 时间未定 | 不/不定期/未定/时间未定/budingqi/bu/weiding/shijianweiding
 
 > 在 alfred2 中输入上面的输入值一栏的任何一个值，比如 `日` 代表的是周日
+
+##### 数据来自 [acgdb](http://acgdb.com/)，如果有更全的数据来源请告知
