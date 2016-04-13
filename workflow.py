@@ -75,6 +75,8 @@ def getAnimesPath():
     return year + month
 
 def getDay(str):
+    if str == '':
+        str = time.strftime('%w')
     for key in days:
         if re.search(u'\[%s\]' % str.strip(), days[key]):
             return key
