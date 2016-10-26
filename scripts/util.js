@@ -11,7 +11,7 @@ function queryFiles(fileList) {
         if(stat.isDirectory()) {
             let files = fs.readdirSync(file).map(item => path.join(file, item));
             list = list.concat(queryFiles(files));
-        } else if(!/^.*\/\.[^\.]+$|^\..*$/.test(file)) {
+        } else if(!/^.*\/\.[^\.]+$|^\..*$|^.*\.pyc$/.test(file)) {
             // 只添加非 ‘.’ 开头的文件
             list.push(file);
         }
