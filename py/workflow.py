@@ -70,6 +70,7 @@ def querySites(queryStr):
                 temp = re.sub(ur'\{\{time\}\}', ani[u'timeCN'], temp)
                 output += temp
             return re.sub(ur'\{\{\content}\}', output, TEMPLATE)
+    return ''
 
 def update():
     args = [u'python', u'./py/update.py']

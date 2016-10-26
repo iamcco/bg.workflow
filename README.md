@@ -1,4 +1,6 @@
-### Alfred2 workflow 查看每日新番
+### Alfred3 workflow 查看每日新番
+
+> 由于我更新了 alfred3 所以不能确定是否支持 alfred2
 
 [下载](https://raw.githubusercontent.com/iamcco/bg.workflow/master/bg.alfredworkflow)
 
@@ -11,6 +13,9 @@ Screenshot
 
 **显示 _201601季度 周日_ 的番**
 ![two](https://cloud.githubusercontent.com/assets/5492542/14480881/d34ad726-015f-11e6-9d50-a7d628c3ac22.png)
+
+**选择动画显示播放网站**
+![four](https://cloud.githubusercontent.com/assets/5492542/19736063/bae3bf1a-9be0-11e6-921f-53d1696d8400.png)
 
 **更新数据**
 ![three](https://cloud.githubusercontent.com/assets/5492542/14480884/ddfecd94-015f-11e6-90f9-15fe8cf5ef91.png)
@@ -26,7 +31,8 @@ Screenshot
 > update 参数会更新本地的数据    
 > 周几 201604 和 update 这三个参数不是必要的    
 > 啥也不输入，获取的是当前季度，当天的番    
-> 选择选项打开默认浏览器百度搜索
+> enter 选项打开播放网站列表
+> shift + enter 选项打开默认浏览器百度搜索
 
 周几     | 输入值
 ---------|-------
@@ -39,6 +45,6 @@ Screenshot
 周六     | 土/周六/06/6/zhouliu/liu/
 时间未定 | 不/不定期/未定/时间未定/budingqi/bu/weiding/shijianweiding
 
-> 在 alfred2 中输入上面的输入值一栏的任何一个值，比如 `日` 代表的是周日    
+> 在 alfred3 中输入上面的输入值一栏的任何一个值，比如 `日` 代表的是周日    
 
-##### 数据来自 [acgdb](http://acgdb.com/)，如果有更全的数据来源请告知
+##### 数据来自 [bgmlist](http://bgmlist.com/)，如果有更全的数据来源请告知
