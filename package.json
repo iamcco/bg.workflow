@@ -1,0 +1,23 @@
+{
+  "name": "bg.workflow",
+  "version": "1.0.0",
+  "description": "format animates data",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamcco/bg.workflow.git"
+  },
+  "author": "年糕小豆汤 <ooiss@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamcco/bg.workflow/issues"
+  },
+  "homepage": "https://github.com/iamcco/bg.workflow#readme",
+  "dependencies": {
+    "bangumi-data": "^0.1.1"
+  }
+}

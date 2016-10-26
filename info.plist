@@ -14,9 +14,36 @@
 				<key>destinationuid</key>
 				<string>77430267-0790-4D98-8EAC-5EAA71F12F58</string>
 				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8E935DCA-167C-40D1-B8B2-431A76DFADBC</string>
+				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>77430267-0790-4D98-8EAC-5EAA71F12F58</key>
+		<array/>
+		<key>8E935DCA-167C-40D1-B8B2-431A76DFADBC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38216535-8361-4992-A9AA-29142AF724A7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -33,23 +60,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
+				<key>alfredfiltersresults</key>
 				<false/>
-				<key>url</key>
-				<string>https://www.baidu.com/s?ie=UTF-8&amp;wd={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>77430267-0790-4D98-8EAC-5EAA71F12F58</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -70,7 +82,11 @@
 				<string>import workflow
 query="{query}"
 
-print workflow.getAnimes(query)</string>
+print workflow.queryAnimates(query)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>查看每日更新的动漫</string>
 				<key>title</key>
@@ -85,7 +101,92 @@ print workflow.getAnimes(query)</string>
 			<key>uid</key>
 			<string>207EAE3C-2E6F-41CA-9370-1511F66EB89B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.baidu.com/s?ie=UTF-8&amp;wd={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>77430267-0790-4D98-8EAC-5EAA71F12F58</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys
+
+import workflow
+
+query = sys.argv[1]
+
+sys.stdout.write(workflow.querySites(query))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8E935DCA-167C-40D1-B8B2-431A76DFADBC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>38216535-8361-4992-A9AA-29142AF724A7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -96,13 +197,31 @@ https://github.com/iamcco/bg.workflow</string>
 	<dict>
 		<key>207EAE3C-2E6F-41CA-9370-1511F66EB89B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
+		</dict>
+		<key>38216535-8361-4992-A9AA-29142AF724A7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>750</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 		<key>77430267-0790-4D98-8EAC-5EAA71F12F58</key>
 		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
+		</dict>
+		<key>8E935DCA-167C-40D1-B8B2-431A76DFADBC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

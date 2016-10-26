@@ -62,5 +62,7 @@ target/
 .ipynb_checkpoints
 
 # customer
-*.json
 .cs_workspaces
+
+# nodejs package
+node_modules/
