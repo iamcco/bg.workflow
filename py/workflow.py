@@ -5,8 +5,9 @@ import json
 import time
 import base64
 import urllib2
+from subprocess import Popen, PIPE
 
-from util import formatQuery,siteToMainName,SITE_NAMES
+from py.util import formatQuery,siteToMainName,SITE_NAMES
 
 TEMPLATE = u'''
 <?xml version="1.0"?>
@@ -23,15 +24,25 @@ ITEM = u'''
   </item>
 '''
 
-DOWNLOAD_PREFIX = u'https://raw.githubusercontent.com/iamcco/bg.workflow/master/'
+DONE = u'''
+<?xml version="1.0"?>
+<items>
+  <item uid="done" arg="" valid="YES">
+    <title>更新成功</title>
+    <subtitle>update completed</subtitle>
+    <icon>./icon.png</icon>
+  </item>
+</items>
+'''
 
-animates = json.load(open(u'data.json'))
 
 def queryAnimates(queryStr):
     query = formatQuery(queryStr)
     output = ''
     if query[u'isUpdate']:
         update()
+    # 获取动画信息
+    animates = json.load(open(u'data.json'))
     if query[u'id'] in animates:
         result = animates[query[u'id']]
         for animes in result:
@@ -46,6 +57,8 @@ def querySites(queryStr):
     query = queryStr.split(' ')
     id = query[0]
     name = ' '.join(query[1:])
+    # 获取动画信息
+    animates = json.load(open(u'data.json'))
     animes = animates[id]
     output = ''
     for ani in animes:
@@ -59,10 +72,5 @@ def querySites(queryStr):
             return re.sub(ur'\{\{\content}\}', output, TEMPLATE)
 
 def update():
-    localVersion = json.load(open(u'version.json'))
-    onlineVersion = json.loads(urllib2.urlopen(DOWNLOAD_PREFIX + u'version.json').read())
-    if localVersion.version < onlineVersion.version:
-        for path in onlineVersion[u'list']:
-            target = urllib2.urlopen(DOWNLOAD_PREFIX + path).read()
-            with open(path) as file:
-                file.write(target)
+    args = [u'python', u'./py/update.py']
+    Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE)

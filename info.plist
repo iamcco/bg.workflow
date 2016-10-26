@@ -79,7 +79,7 @@
 				<key>runningsubtext</key>
 				<string>正在努力查找更新</string>
 				<key>script</key>
-				<string>import workflow
+				<string>from py import workflow
 query="{query}"
 
 print workflow.queryAnimates(query)</string>
@@ -140,11 +140,11 @@ print workflow.queryAnimates(query)</string>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>正在玩命加载~</string>
 				<key>script</key>
 				<string>import sys
 
-import workflow
+from py import workflow
 
 query = sys.argv[1]
 
@@ -154,7 +154,7 @@ sys.stdout.write(workflow.querySites(query))</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>站点列表</string>
 				<key>title</key>
 				<string></string>
 				<key>type</key>
