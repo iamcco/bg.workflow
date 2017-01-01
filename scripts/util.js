@@ -21,8 +21,7 @@ function queryFiles(fileList) {
 
 //get animates data from bgmlist.com
 function queryAnimateData(resFun, rejFun) {
-    const HOST = 'https://bgmlist.com/';
-    const URL = 'https://bgmlist.com/json/archive.json';
+    const URL = 'https://bgmlist.com/tempapi/archive.json';
     let escapeWords = function(str) {
         const words = [{
             key: '&',
@@ -57,10 +56,11 @@ function queryAnimateData(resFun, rejFun) {
             let data = {};
             let count = 0;
             for(let year in animates.data) {
+                console.log(year)
                 for(let season in animates.data[year]) {
                     count++;
                     // 通过索引获取每个季度的番数据
-                    http.get(HOST + animates.data[year][season]['path'], res => {
+                    http.get(animates.data[year][season]['path'], res => {
                         let seasonData = '';
                         res.on('data', thunkData => {
                             seasonData += thunkData;
